@@ -1,6 +1,9 @@
 # proplogic
 
-A lightweight JavaScript library for tokenizing, formatting, and validating propositional logic expressions. Supports standard Unicode logic symbols as well as common aliases.
+[![npm version](https://img.shields.io/npm/v/proplogic)](https://www.npmjs.com/package/proplogic)
+[![npm downloads](https://img.shields.io/npm/dm/proplogic)](https://www.npmjs.com/package/proplogic)
+
+A lightweight JavaScript library for tokenizing, formatting, and validating propositional logic expressions.
 
 ## Installation
 
