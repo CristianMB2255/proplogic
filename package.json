@@ -1,0 +1,31 @@
+{
+  "name": "proplogic",
+  "version": "1.0.0",
+  "description": "Propositional logic expressions validator and parser.",
+  "main": "src/index.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "bun test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianMB2255/proplogic.git"
+  },
+  "keywords": [
+    "propositional",
+    "logic",
+    "validator",
+    "wff",
+    "parser",
+    "boolean"
+  ],
+  "author": "CristianMB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CristianMB2255/proplogic/issues"
+  },
+  "homepage": "https://github.com/CristianMB2255/proplogic#readme"
+}
