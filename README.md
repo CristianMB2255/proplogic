@@ -37,12 +37,12 @@ Validates whether a string is a well-formed propositional logic formula.
 Whitespace is ignored. Invalid or unrecognized characters return `false`.
 
 ```js
-validatelexp('P∧Q');     // true
-validatelexp('(P∨Q)→R'); // true
-validatelexp('¬(¬P)');   // true
-validatelexp('∧P');      // false
-validatelexp('P∧∧Q');    // false
-validatelexp(')(P)');    // false
+lexp.validate('P∧Q');     // true
+lexp.validate('(P∨Q)→R'); // true
+lexp.validate('¬(¬P)');   // true
+lexp.validate('∧P');      // false
+lexp.validate('P∧∧Q');    // false
+lexp.validate(')(P)');    // false
 ```
 
 ---
@@ -61,14 +61,14 @@ Tokenizes a propositional logic expression into an array of typed tokens.
 Token types: `operand`, `operator`, `not`, `open`, `close`.
 
 ```js
-tokenizelexp('P∧Q');
+lexp.tokenize('P∧Q');
 // [
 //   { type: 'operand',  value: 'P' },
 //   { type: 'operator', value: '∧' },
 //   { type: 'operand',  value: 'Q' }
 // ]
 
-tokenizelexp('P & Q');
+lexp.tokenize('P & Q');
 // [
 //   { type: 'operand',  value: 'P' },
 //   { type: 'operator', value: '∧' },  ← alias normalized
@@ -90,10 +90,10 @@ Normalizes an expression by stripping whitespace and replacing ASCII aliases wit
 **Throws** `Error` — Expression can not te formatted.
 
 ```js
-formatlexp('P & Q');  // 'P∧Q'
-formatlexp('P | Q');  // 'P∨Q'
-formatlexp('!P > Q'); // '¬P→Q'
-formatlexp('P = Q');  // 'P↔Q'
+lexp.format('P & Q');  // 'P∧Q'
+lexp.format('P | Q');  // 'P∨Q'
+lexp.format('!P > Q'); // '¬P→Q'
+lexp.format('P = Q');  // 'P↔Q'
 ```
 
 ---
@@ -124,7 +124,7 @@ console.log(confusablesTable);
 | `↮` | Not Equals | `≢`, `⇎` |
 | `⊻` | Exclusive OR (XOR) | `+`, `⊕` |
 | `⊽` | NAND | `↑` |
-| `↓` | NOR | `↓` |
+| `⊽` | NOR | `↓` |
 | `¬` | Negation (NOT) | `~`, `!` |
 
 ### Grouping

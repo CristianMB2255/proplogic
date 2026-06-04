@@ -1,6 +1,6 @@
 {
   "name": "proplogic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Propositional logic expressions validator and parser.",
   "main": "src/index.js",
   "type": "module",
